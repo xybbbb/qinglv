@@ -1,0 +1,468 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EBD9D4FE-9AA9-4FC1-8CB5-3AA006D3C13C}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>情侣博客</RootNamespace>
+    <AssemblyName>情侣博客</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44392</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=2.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.2.0.1\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.9\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.9.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.9\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.9\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.9\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.9\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.9\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="asset\login.jpg" />
+    <Content Include="asset\QQ.png" />
+    <Content Include="asset\register.jpg" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\bootstrap.min_1.css" />
+    <Content Include="css\Bootstrap4.css" />
+    <Content Include="css\botui-theme-default.css" />
+    <Content Include="css\botui.min.css" />
+    <Content Include="css\emojify.min.css" />
+    <Content Include="css\font-awesome.min.css" />
+    <Content Include="css\hover.cur" />
+    <Content Include="css\jquery.fancybox.min.css" />
+    <Content Include="css\normal.cur" />
+    <Content Include="css\OwO.min.css" />
+    <Content Include="css\style.css" />
+    <Content Include="css\style1.css" />
+    <Content Include="css\style3.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="houduan\WebForm1.aspx" />
+    <Content Include="houduan\WebForm2.aspx" />
+    <Content Include="houduan\WebForm3.aspx" />
+    <Content Include="houduan\WebForm4.aspx" />
+    <Content Include="houduan\WebForm5.aspx" />
+    <Content Include="houduan\WebForm6.aspx" />
+    <Content Include="houduan\WebForm7.aspx" />
+    <Content Include="houduan\WebForm8.aspx" />
+    <Content Include="houduan\zhuye1.aspx" />
+    <Content Include="houduan\zhuye2.aspx" />
+    <Content Include="houduan\zhuye3.aspx" />
+    <Content Include="img\1.png" />
+    <Content Include="img\2.png" />
+    <Content Include="img\Cache_5653746649a79d36.jpg" />
+    <Content Include="img\DB65CD7872DC4CB54B6DB90E612419D1.jpg.jpg" />
+    <Content Include="img\fontawesome-webfont.svg" />
+    <Content Include="img\lolisister1.gif" />
+    <Content Include="img\women.png" />
+    <Content Include="js\bootstrap.bundle.min.js" />
+    <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\Calendar.js" />
+    <Content Include="js\disable-devtool.min.js" />
+    <Content Include="js\disable-devtool.min_1.js" />
+    <Content Include="js\editormd.min.js" />
+    <Content Include="js\emojify.min.js" />
+    <Content Include="js\fetch.min.js" />
+    <Content Include="js\jquery.fancybox.min.js" />
+    <Content Include="js\jquery.min.js" />
+    <Content Include="js\jquery.min_1.js" />
+    <Content Include="js\jquery.pjax.min.js" />
+    <Content Include="js\layer.js" />
+    <Content Include="js\main.js" />
+    <Content Include="js\marked.min.js" />
+    <Content Include="js\mishi.js" />
+    <Content Include="js\nprogress.min.js" />
+    <Content Include="js\OwO.min.js" />
+    <Content Include="js\scrollreveal.js" />
+    <Content Include="js\typed.min.js" />
+    <Content Include="other\ad45889df2f8afe82d55a8fba45133ef.jfif" />
+    <Content Include="houduan\static\css\bootstrap.min.css" />
+    <Content Include="houduan\static\css\bootstrap.min1.css" />
+    <Content Include="houduan\static\css\botui-theme-default.css" />
+    <Content Include="houduan\static\css\botui.min.css" />
+    <Content Include="houduan\static\css\css.css" />
+    <Content Include="houduan\static\css\css1.css" />
+    <Content Include="houduan\static\css\emojify.min.css" />
+    <Content Include="houduan\static\css\font-awesome.min.css" />
+    <Content Include="houduan\static\css\fontawesome-all.min.css" />
+    <Content Include="houduan\static\css\grid.css" />
+    <Content Include="houduan\static\css\jquery.fancybox.min.css" />
+    <Content Include="houduan\static\css\main.css" />
+    <Content Include="houduan\static\css\normalize.css" />
+    <Content Include="houduan\static\css\noscript.css" />
+    <Content Include="houduan\static\css\OwO.min.css" />
+    <Content Include="houduan\static\css\style.css" />
+    <Content Include="houduan\static\css\style1.css" />
+    <Content Include="houduan\static\font\fa-brands-400.svg" />
+    <Content Include="houduan\static\font\fa-regular-400.svg" />
+    <Content Include="houduan\static\font\fa-solid-900.svg" />
+    <Content Include="houduan\static\font\fontawesome-webfont.svg" />
+    <Content Include="houduan\static\image\ajax-loader.gif" />
+    <Content Include="houduan\static\image\arrow.svg" />
+    <Content Include="houduan\static\image\B6560D34696833F49655B25B7926A9A1.jpg" />
+    <Content Include="houduan\static\image\close.svg" />
+    <Content Include="houduan\static\image\editor%402x.png" />
+    <Content Include="houduan\static\image\editor.png" />
+    <Content Include="houduan\static\image\htvkG9LmSJWK4CF.jpg" />
+    <Content Include="houduan\static\image\icons-2x-s481937020b.png" />
+    <Content Include="houduan\static\image\icons-s0c4f1c5ae6.png" />
+    <Content Include="houduan\static\image\spinner.svg" />
+    <Content Include="houduan\static\image\typecho-logo.svg" />
+    <Content Include="houduan\static\js\bootstrap.bundle.min.js" />
+    <Content Include="houduan\static\js\bootstrap.min.js" />
+    <Content Include="houduan\static\js\botui.js" />
+    <Content Include="houduan\static\js\botui.min.js" />
+    <Content Include="houduan\static\js\breakpoints.min.js" />
+    <Content Include="houduan\static\js\browser.min.js" />
+    <Content Include="houduan\static\js\disable-devtool.min.js" />
+    <Content Include="houduan\static\js\disable-devtool.min1.js" />
+    <Content Include="houduan\static\js\editormd.min.js" />
+    <Content Include="houduan\static\js\emojify.min.js" />
+    <Content Include="houduan\static\js\fetch.min.js" />
+    <Content Include="houduan\static\js\jquery-ui.js" />
+    <Content Include="houduan\static\js\jquery.fancybox.min.js" />
+    <Content Include="houduan\static\js\jquery.js" />
+    <Content Include="houduan\static\js\jquery.min.js" />
+    <Content Include="houduan\static\js\jquery.min1.js" />
+    <Content Include="houduan\static\js\jquery.min2.js" />
+    <Content Include="houduan\static\js\jquery.pjax.min.js" />
+    <Content Include="houduan\static\js\jquery.poptrox.min.js" />
+    <Content Include="houduan\static\js\layer.js" />
+    <Content Include="houduan\static\js\main.js" />
+    <Content Include="houduan\static\js\main1.js" />
+    <Content Include="houduan\static\js\marked.min.js" />
+    <Content Include="houduan\static\js\mishi.js" />
+    <Content Include="houduan\static\js\mishi1.js" />
+    <Content Include="houduan\static\js\nprogress.min.js" />
+    <Content Include="houduan\static\js\OwO.min.js" />
+    <Content Include="houduan\static\js\scrollreveal.js" />
+    <Content Include="houduan\static\js\typecho.js" />
+    <Content Include="houduan\static\js\typed.min.js" />
+    <Content Include="houduan\static\js\util.js" />
+    <Content Include="houduan\static\js\vue.min.js" />
+    <Content Include="houduan\static\picture\1.gif" />
+    <Content Include="houduan\static\picture\12.gif" />
+    <Content Include="houduan\static\picture\13.gif" />
+    <Content Include="houduan\static\picture\18.gif" />
+    <Content Include="houduan\static\picture\2.gif" />
+    <Content Include="houduan\static\picture\24.gif" />
+    <Content Include="houduan\static\picture\25.gif" />
+    <Content Include="houduan\static\picture\29.gif" />
+    <Content Include="houduan\static\picture\7e3ad422e25970fd78590e5b5a0c9d0b.jpg" />
+    <Content Include="houduan\static\picture\e3fba8d1fd6c6735cca0a98f9f7905f9.jpg" />
+    <Content Include="houduan\static\picture\e60143bd8433118ae4ba9c0efda16ae9.png" />
+    <Content Include="houduan\static\picture\g.jpg" />
+    <Content Include="houduan\static\picture\g.png" />
+    <Content Include="houduan\static\picture\g1.jpg" />
+    <Content Include="houduan\static\picture\g10.jpg" />
+    <Content Include="houduan\static\picture\g11.jpg" />
+    <Content Include="houduan\static\picture\g12.jpg" />
+    <Content Include="houduan\static\picture\g13.jpg" />
+    <Content Include="houduan\static\picture\g14.jpg" />
+    <Content Include="houduan\static\picture\g15.jpg" />
+    <Content Include="houduan\static\picture\g16.jpg" />
+    <Content Include="houduan\static\picture\g17.jpg" />
+    <Content Include="houduan\static\picture\g18.jpg" />
+    <Content Include="houduan\static\picture\g2.jpg" />
+    <Content Include="houduan\static\picture\g3.jpg" />
+    <Content Include="houduan\static\picture\g4.jpg" />
+    <Content Include="houduan\static\picture\g5.jpg" />
+    <Content Include="houduan\static\picture\g6.jpg" />
+    <Content Include="houduan\static\picture\g7.jpg" />
+    <Content Include="houduan\static\picture\g8.jpg" />
+    <Content Include="houduan\static\picture\g9.jpg" />
+    <Content Include="houduan\static\picture\lolisister1.gif" />
+    <Content Include="houduan\static\picture\ok.svg" />
+    <Content Include="houduan\static\picture\todo.svg" />
+    <Content Include="houduan\static\picture\women.png" />
+    <Content Include="video\1.mp4" />
+    <Content Include="Web.config" />
+    <Content Include="houduan\zhuye.aspx" />
+    <Content Include="houduan\denglu.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="houduan\Site1.Master.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="houduan\Site1.Master.designer.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+    </Compile>
+    <Compile Include="houduan\WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="houduan\WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="houduan\WebForm2.aspx.cs">
+      <DependentUpon>WebForm2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="houduan\WebForm2.aspx.designer.cs">
+      <DependentUpon>WebForm2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="houduan\WebForm3.aspx.cs">
+      <DependentUpon>WebForm3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="houduan\WebForm3.aspx.designer.cs">
+      <DependentUpon>WebForm3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="houduan\WebForm4.aspx.cs">
+      <DependentUpon>WebForm4.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="houduan\WebForm4.aspx.designer.cs">
+      <DependentUpon>WebForm4.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="houduan\WebForm5.aspx.cs">
+      <DependentUpon>WebForm5.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="houduan\WebForm5.aspx.designer.cs">
+      <DependentUpon>WebForm5.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="houduan\WebForm6.aspx.cs">
+      <DependentUpon>WebForm6.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="houduan\WebForm6.aspx.designer.cs">
+      <DependentUpon>WebForm6.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="houduan\WebForm7.aspx.cs">
+      <DependentUpon>WebForm7.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="houduan\WebForm7.aspx.designer.cs">
+      <DependentUpon>WebForm7.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="houduan\WebForm8.aspx.cs">
+      <DependentUpon>WebForm8.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="houduan\WebForm8.aspx.designer.cs">
+      <DependentUpon>WebForm8.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="houduan\zhuye1.aspx.cs">
+      <DependentUpon>zhuye1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="houduan\zhuye1.aspx.designer.cs">
+      <DependentUpon>zhuye1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="houduan\zhuye2.aspx.cs">
+      <DependentUpon>zhuye2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="houduan\zhuye2.aspx.designer.cs">
+      <DependentUpon>zhuye2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="houduan\zhuye3.aspx.cs">
+      <DependentUpon>zhuye3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="houduan\zhuye3.aspx.designer.cs">
+      <DependentUpon>zhuye3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="houduan\zhuye.aspx.cs">
+      <DependentUpon>zhuye.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="houduan\zhuye.aspx.designer.cs">
+      <DependentUpon>zhuye.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="houduan\denglu.aspx.cs">
+      <DependentUpon>denglu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="houduan\denglu.aspx.designer.cs">
+      <DependentUpon>denglu.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\fonts.woff2" />
+    <Content Include="houduan\Site1.Master" />
+    <None Include="packages.config" />
+    <Content Include="houduan\static\font\6xK1dSBYKcSV-LCoeQqfX1RYOo3qPZ7jsDJT9g.woff2" />
+    <Content Include="houduan\static\font\6xK1dSBYKcSV-LCoeQqfX1RYOo3qPZ7ksDJT9g.woff2" />
+    <Content Include="houduan\static\font\6xK1dSBYKcSV-LCoeQqfX1RYOo3qPZ7nsDI.woff2" />
+    <Content Include="houduan\static\font\6xK1dSBYKcSV-LCoeQqfX1RYOo3qPZ7osDJT9g.woff2" />
+    <Content Include="houduan\static\font\6xK1dSBYKcSV-LCoeQqfX1RYOo3qPZ7psDJT9g.woff2" />
+    <Content Include="houduan\static\font\6xK1dSBYKcSV-LCoeQqfX1RYOo3qPZ7qsDJT9g.woff2" />
+    <Content Include="houduan\static\font\6xK3dSBYKcSV-LCoeQqfX1RYOo3qN67lqDY.woff2" />
+    <Content Include="houduan\static\font\6xK3dSBYKcSV-LCoeQqfX1RYOo3qNa7lqDY.woff2" />
+    <Content Include="houduan\static\font\6xK3dSBYKcSV-LCoeQqfX1RYOo3qNK7lqDY.woff2" />
+    <Content Include="houduan\static\font\6xK3dSBYKcSV-LCoeQqfX1RYOo3qNq7lqDY.woff2" />
+    <Content Include="houduan\static\font\6xK3dSBYKcSV-LCoeQqfX1RYOo3qO67lqDY.woff2" />
+    <Content Include="houduan\static\font\6xK3dSBYKcSV-LCoeQqfX1RYOo3qOK7l.woff2" />
+    <Content Include="houduan\static\font\6xK3dSBYKcSV-LCoeQqfX1RYOo3qPK7lqDY.woff2" />
+    <Content Include="houduan\static\font\6xKwdSBYKcSV-LCoeQqfX1RYOo3qPZZMkidh18Smxg.woff2" />
+    <Content Include="houduan\static\font\6xKwdSBYKcSV-LCoeQqfX1RYOo3qPZZMkidi18Smxg.woff2" />
+    <Content Include="houduan\static\font\6xKwdSBYKcSV-LCoeQqfX1RYOo3qPZZMkidj18Smxg.woff2" />
+    <Content Include="houduan\static\font\6xKwdSBYKcSV-LCoeQqfX1RYOo3qPZZMkido18Smxg.woff2" />
+    <Content Include="houduan\static\font\6xKwdSBYKcSV-LCoeQqfX1RYOo3qPZZMkids18Q.woff2" />
+    <Content Include="houduan\static\font\6xKwdSBYKcSV-LCoeQqfX1RYOo3qPZZMkidv18Smxg.woff2" />
+    <Content Include="houduan\static\font\6xKydSBYKcSV-LCoeQqfX1RYOo3ik4zwkxduz8A.woff2" />
+    <Content Include="houduan\static\font\6xKydSBYKcSV-LCoeQqfX1RYOo3ik4zwlBduz8A.woff2" />
+    <Content Include="houduan\static\font\6xKydSBYKcSV-LCoeQqfX1RYOo3ik4zwlxdu.woff2" />
+    <Content Include="houduan\static\font\6xKydSBYKcSV-LCoeQqfX1RYOo3ik4zwmBduz8A.woff2" />
+    <Content Include="houduan\static\font\6xKydSBYKcSV-LCoeQqfX1RYOo3ik4zwmhduz8A.woff2" />
+    <Content Include="houduan\static\font\6xKydSBYKcSV-LCoeQqfX1RYOo3ik4zwmRduz8A.woff2" />
+    <Content Include="houduan\static\font\6xKydSBYKcSV-LCoeQqfX1RYOo3ik4zwmxduz8A.woff2" />
+    <Content Include="houduan\static\font\fa-brands-400.eot" />
+    <Content Include="houduan\static\font\fa-brands-400.ttf" />
+    <Content Include="houduan\static\font\fa-brands-400.woff" />
+    <Content Include="houduan\static\font\fa-brands-400.woff2" />
+    <Content Include="houduan\static\font\fa-regular-400.eot" />
+    <Content Include="houduan\static\font\fa-regular-400.ttf" />
+    <Content Include="houduan\static\font\fa-regular-400.woff" />
+    <Content Include="houduan\static\font\fa-regular-400.woff2" />
+    <Content Include="houduan\static\font\fa-solid-900.eot" />
+    <Content Include="houduan\static\font\fa-solid-900.ttf" />
+    <Content Include="houduan\static\font\fa-solid-900.woff" />
+    <Content Include="houduan\static\font\fa-solid-900.woff2" />
+    <Content Include="houduan\static\font\fontawesome-webfont.eot" />
+    <Content Include="houduan\static\font\fontawesome-webfont.ttf" />
+    <Content Include="houduan\static\font\fontawesome-webfont.woff" />
+    <Content Include="houduan\static\font\fontawesome-webfont.woff2" />
+    <Content Include="houduan\static\font\fonts.woff2" />
+    <Content Include="houduan\static\font\memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsjZ0B4gaVI.woff2" />
+    <Content Include="houduan\static\font\memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsjZ0B4iaVIGxA.woff2" />
+    <Content Include="houduan\static\font\memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsjZ0B4jaVIGxA.woff2" />
+    <Content Include="houduan\static\font\memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsjZ0B4kaVIGxA.woff2" />
+    <Content Include="houduan\static\font\memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsjZ0B4saVIGxA.woff2" />
+    <Content Include="houduan\static\font\memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsjZ0B4taVIGxA.woff2" />
+    <Content Include="houduan\static\font\memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsjZ0B4uaVIGxA.woff2" />
+    <Content Include="houduan\static\font\memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsjZ0B4vaVIGxA.woff2" />
+    <Content Include="houduan\static\font\zhanku.ttf" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{8d71e875-cfcb-47fa-9ef8-9392b06ad56b}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{373efe00-0d05-42b5-be06-9f1984e2f394}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>64782</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44392/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>这台计算机上缺少此项目引用的 NuGet 程序包。使用“NuGet 程序包还原”可下载这些程序包。有关更多信息，请参见 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的文件是 {0}。</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
